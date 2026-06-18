@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昭和学院中学校・高等学校 サイエンスアカデミー（SA）コース</title>
+    
+    <!-- Google Fonts（かわいい文字にするためのフォント） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome（顕微鏡や星などのアイコンを表示するためのもの） -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSSファイルの読み込み（CodePenでは自動で連携されますが、通常のWeb制作の形にしています） -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ふわふわ浮かぶパステルオブジェクト（理科のイラスト背景装飾） -->
+    <svg class="floating-bg-element el-flask" viewBox="0 0 100 100">
+        <path d="M40 20 h20 v10 l15 40 A10 10 0 0 1 67 85 H33 A10 10 0 0 1 25 70 l15 -40 z" fill="#a3d8f4" opacity="0.6"/>
+        <circle cx="50" cy="65" r="12" fill="#fff0f5"/>
+    </svg>
+    <svg class="floating-bg-element el-dna" viewBox="0 0 100 100">
+        <path d="M30 20 Q50 35 70 20 M70 50 Q50 35 30 50 M30 50 Q50 65 70 50 M70 80 Q50 65 30 80" stroke="#ffb7c5" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <circle cx="30" cy="20" r="5" fill="#c3bef7"/><circle cx="70" cy="20" r="5" fill="#c3bef7"/>
+        <circle cx="30" cy="50" r="5" fill="#a7ebd0"/><circle cx="70" cy="50" r="5" fill="#a7ebd0"/>
+        <circle cx="30" cy="80" r="5" fill="#ffe699"/><circle cx="70" cy="80" r="5" fill="#ffe699"/>
+    </svg>
+    <svg class="floating-bg-element el-atom" viewBox="0 0 100 100">
+        <ellipse cx="50" cy="50" rx="40" ry="15" fill="none" stroke="#c3bef7" stroke-width="2" transform="rotate(30 50 50)"/>
+        <ellipse cx="50" cy="50" rx="40" ry="15" fill="none" stroke="#c3bef7" stroke-width="2" transform="rotate(110 50 50)"/>
+        <ellipse cx="50" cy="50" rx="40" ry="15" fill="none" stroke="#c3bef7" stroke-width="2" transform="rotate(150 50 50)"/>
+        <circle cx="50" cy="50" r="10" fill="#ffb7c5"/>
+    </svg>
+    <svg class="floating-bg-element el-gear" viewBox="0 0 100 100">
+        <path d="M50 35 a15 15 0 1 1 0 30 15 15 0 0 1 0 -30 M50 20 l0 6 M50 74 l0 6 M20 50 l6 0 M74 50 l6 0" stroke="#a7ebd0" stroke-width="8" stroke-linecap="round"/>
+    </svg>
+    <svg class="floating-bg-element el-star" viewBox="0 0 100 100">
+        <polygon points="50,10 61,38 90,38 67,57 76,85 50,68 24,85 33,57 10,38 39,38" fill="#ffe699"/>
+    </svg>
+
+    <!-- 1. ヘッダーとナビゲーションメニュー -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-circle">SA</div>
+                <div class="logo-text">
+                    昭和学院中学校・高等学校
+                    <span>サイエンスアカデミーコース</span>
+                </div>
+            </div>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero">ホーム</a>
+                <a href="#concept">SAの特徴</a>
+                <a href="#features">特色</a>
+                <a href="#curriculum">活動内容</a>
+                <a href="#gallery">ギャラリー</a>
+                <a href="#faq">Q&A</a>
+                <a href="#entry" class="btn-pastel" style="padding: 8px 20px; border-width: 2px;">入試情報</a>
+            </nav>
+            
+            <!-- スマホ用のメニューボタン -->
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. メインビジュアル（ヒーローセクション） -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <span class="hero-tag">Science Academy Course</span>
+                    <h1>あふれる知的好奇心を研究に向け<br><span>科学で遊びつくす</span></h1>
+                    <p>研究は最高の遊び場。一人の「？」をみんなで考え、好奇心で世界を切り拓く。科学で遊び、学びを楽しむコース。</p>
+                    <div class="hero-buttons">
+                        <a href="#concept" class="btn-pastel">SAを覗いてみる <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#entry" class="btn-pastel secondary">説明会情報</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-deco-1"></div>
+                    <div class="visual-deco-2"></div>
+                    <div class="visual-frame">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=600" alt="[サイエンス実験を楽しむ生徒たちのイメージ]" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. コースの理念（SAの想い） -->
+    <section id="concept">
+        <div class="container">
+            <div class="concept-grid">
+                <div class="concept-img">
+                    <div class="img-stack">
+                        <div class="stack-item stack-1">
+                            <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=500" alt="[研究室のような最先端の学び舎]" onerror="this.src='https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&q=80&w=500'">
+                        </div>
+                        <div class="stack-item stack-2">
+                            <img src="https://images.unsplash.com/photo-1530210120071-aa1927dd2447?auto=format&fit=crop&q=80&w=500" alt="[理科実験を楽しむパステルな様子]" onerror="this.src='https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=500'">
+                        </div>
+                    </div>
+                </div>
+                <div class="concept-content">
+                    <div class="section-title" style="text-align: left; margin-bottom: 30px;">
+                        <h2>本コースの特徴</h2>
+                        <p>Our Features</p>
+                    </div>
+                    <p class="concept-text">
+好奇心で世界を切り拓く。科学で遊び、学びを楽しむ
+                    </p>
+                    <div class="highlight-box">
+                        <h4>学びのポイント</h4>
+                        <p>論文発表、ディスカッションなどを通じた発表の機会・中央大学や東京学芸大学、Googleなどの社会見学
+</p>
+                    </div>
+                    <a href="#features" class="btn-pastel">Feature point　→</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 3つの特色 -->
+    <section id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>３つの特徴</h2>
+                <p>3 Great Features of SA</p>
+            </div>
+            
+            <div class="features-grid">
+                <!-- 特色 1 -->
+                <div class="feature-card card-1">
+                    <span class="feature-badge">Feature 01</span>
+                    <div class="feature-icon-wrapper">
+                        <i class="fa-solid fa-microscope"></i>
+                    </div>
+                    <h3>本物の探究活動で科学的思考の「型」を習得</h3>
+                    <p>仮説と検証を重ねる論理的かつ科学的思考は、文理を問わず広い分野での活用が期待されます。SAコースでは週1〜2時間の授業と昼休みや放課後などの時間を使い研究活動を実施。未知とされているテーマを見つけ、最新論文に触れながら、自分で論文にまとめることがゴールです。これまでにシロイヌナズナの変異体の解析や、鶏出汁の香気成分と味の数値化、真間川の水質調査など、さまざまなテーマに取り組んできました。</p>
+                </div>
+
+                <!-- 特色 2 -->
+                <div class="feature-card card-2">
+                    <span class="feature-badge">Feature 02</span>
+                    <div class="feature-icon-wrapper">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                    </div>
+                    <h3>興味を糧に、自ら考え学ぶ意欲を高める</h3>
+                    <p>「科学が好き」。その純粋な興味の種を育てるため、教科横断の取り組みも。国語や英語などの他教科でも科学にまつわるテーマを取り扱うことで、総合的、探究的な学びの垣根を越えたアプローチに。興味を伸ばし、没頭して得られる喜びは無限大です。学びを強制するのではなく、自ら考え学ぶ姿勢を目指します。</p>
+                </div>
+
+                <!-- 特色 3 -->
+                <div class="feature-card card-3">
+                    <span class="feature-badge">Feature 03</span>
+                    <div class="feature-icon-wrapper">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3>専門コースだからこそできる充実した設備と熱意ある指導</h3>
+                    <p>最新のPCRや遺伝子組み換え実験、電子顕微鏡、光化学顕微鏡など、大学の研究室さながらの専門機器に加え、2025年度にはプラネタリウム設備を一新。AIも正しく活用し、興味と知識を深める「おもしろい」「もっと知りたい」という思いを追求し、没頭する。その経験は、次の学びを模索するきっかけにもなるはずです。万全の環境を活かし、自由に楽しみ尽くしてください。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. カリキュラムとステップ（中学校・高校） -->
+    <section id="curriculum">
+        <div class="container">
+            <div class="section-title">
+                <h2>好奇心を刺激する学びのステップ</h2>
+                <p>Curriculum & Core Programs</p>
+            </div>
+
+            <!-- タブボタン -->
+            <div class="curriculum-tabs">
+                <button class="tab-btn active" data-tab="junior">中学校 (探究の芽生え)</button>
+                <button class="tab-btn" data-tab="senior">高等学校 (探究の深化)</button>
+            </div>
+
+            <!-- 中学校コンテンツ -->
+            <div class="tab-content active" id="junior">
+                <div class="curriculum-grid">
+                    <div class="curriculum-cards-wrap">
+                        <div class="curriculum-card-item">
+                            <div class="curr-step">01</div>
+                            <div class="curr-info">
+                                <h4>サイエンス基礎・おもしろ実験</h4>
+                                <p>身の回りの「ふしぎ」に隠された科学を解き明かす楽しい実験。五感を使って科学のルールを体感します。</p>
+                            </div>
+                        </div>
+                        <div class="curriculum-card-item">
+                            <div class="curr-step">02</div>
+                            <div class="curr-info">
+                                <h4>プログラミングとロボティクス</h4>
+                                <p>論理的思考力を楽しく養うビジュアルコーディングや、自作ロボットを動かすSTEM教育プログラムです。</p>
+                            </div>
+                        </div>
+                        <div class="curriculum-card-item">
+                            <div class="curr-step">03</div>
+                            <div class="curr-info">
+                                <h4>自然観察・フィールドワーク</h4>
+                                <p>学校を飛び出し、豊かな自然環境や科学館を訪問。実際の生態系や最先端テクノロジーに触れる校外学習です。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="curriculum-visual">
+                        <div class="collage-frame">
+                            <img src="https://images.unsplash.com/photo-1562774053-401386dfdf8f?auto=format&fit=crop&q=80&w=500" alt="[理科室の楽しい様子]" onerror="this.src='https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=500'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 高校コンテンツ -->
+            <div class="tab-content" id="senior">
+                <div class="curriculum-grid">
+                    <div class="curriculum-cards-wrap">
+                        <div class="curriculum-card-item">
+                            <div class="curr-step">01</div>
+                            <div class="curr-info">
+                                <h4>アカデミックリサーチ(自由研究)</h4>
+                                <p>自ら問いを立て、実験計画を設計、検証する本格的な論文執筆。学会発表レベルの成果を目指します。</p>
+                            </div>
+                        </div>
+                        <div class="curriculum-card-item">
+                            <div class="curr-step">02</div>
+                            <div class="curr-info">
+                                <h4>大学・企業共同ラボプロジェクト</h4>
+                                <p>一流大学の研究室や企業の開発チームと連携した長期プロジェクト。実践的なイノベーション力を養います。</p>
+                            </div>
+                        </div>
+                        <div class="curriculum-card-item">
+                            <div class="curr-step">03</div>
+                            <div class="curr-info">
+                                <h4>グローバル発表・国際交流</h4>
+                                <p>他校との合同サイエンスフェアや英語プレゼンテーション大会へ挑戦し、発信力を世界基準へと高めます。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="curriculum-visual">
+                        <div class="collage-frame" style="background-color: var(--bg-pastel-pink); transform: rotate(-3deg);">
+                            <img src="https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&q=80&w=500" alt="[真剣に議論する高校生の様子]" onerror="this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=500'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. 日常ギャラリー ＆ 在校生の声 -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>研究の様子</h2>
+                <p>Research situation</p>
+            </div>
+
+            <!-- 画像ギャラリー -->
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80&w=300" alt="[実験ノートをとる様子]" onerror="this.src='https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=300'">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>実験記録ノート</h4>
+                            <p>すべての行動を記録し今後の実験に役立てる</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=300" alt="[チーム開発ミーティング]" onerror="this.src='https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&q=80&w=300'">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>チーム研究発表</h4>
+                            <p>総合の時間にチームごとに進捗報告</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=300" alt="[最新顕微鏡を覗く様子]" onerror="this.src='https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=300'">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>高性能な実験器具</h4>
+                       <p>質の高い実験器具を用いて実験を行います </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1516534775068-ba3e84589d90?auto=format&fit=crop&q=80&w=300" alt="[笑顔のサイエンス女子]" onerror="this.src='https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=300'">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h4>学びの笑顔</h4>
+                            <p>発見した瞬間のきらめく表情</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- スライド式の生徒の声 -->
+            <div class="voice-section">
+                <div class="voice-slider">
+                    
+                    <div class="voice-slide active">
+                        <div class="voice-avatar-wrap">
+                            <div class="voice-avatar">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="[SAコース在校生Aさん]" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200'">
+                            </div>
+                            <span class="voice-avatar-badge">中学2年</span>
+                        </div>
+                        <div class="voice-content">
+                            <p class="voice-quote">「ただ暗記するだけじゃなくて、なんでそうなるのかを先生と一緒に実験して目の前で確かめられるのがすごく楽しいです！お気に入りはスライムで学ぶ高分子実験！」</p>
+                            <p class="voice-author">M.K. さん （市川市立小学校出身）</p>
+                        </div>
+                    </div>
+
+                    <div class="voice-slide">
+                        <div class="voice-avatar-wrap">
+                            <div class="voice-avatar" style="border-color: var(--main-blue);">
+                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=200" alt="[SAコース在校生Bくん]" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200'">
+                            </div>
+                            <span class="voice-avatar-badge" style="background-color: var(--main-blue);">高校1年</span>
+                        </div>
+                        <div class="voice-content">
+                            <p class="voice-quote">「SAコースに入ってから、プログラミングや大学との連携授業を通じて、将来研究者になりたいという夢が具体的になりました。毎日新しい発見があります！」</p>
+                            <p class="voice-author">T.S. くん （昭和学院中学校出身）</p>
+                        </div>
+                    </div>
+
+                    <div class="voice-slide">
+                        <div class="voice-avatar-wrap">
+                            <div class="voice-avatar" style="border-color: var(--main-purple);">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200" alt="[SAコース卒業生Cさん]" onerror="this.src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=200'">
+                            </div>
+                            <span class="voice-avatar-badge" style="background-color: var(--main-purple);">高校3年</span>
+                        </div>
+                        <div class="voice-content">
+                            <p class="voice-quote">「英語で自分の研究を発表した経験は、他では得られない自信になりました。受験に向けての研究論文作成も、先生方がマンツーマンで支えてくれます。」</p>
+                            <p class="voice-author">Y.H. さん （船橋市立小学校出身）</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="voice-controls">
+                    <button class="voice-btn" id="prevVoice"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="voice-btn" id="nextVoice"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 7. Q&A コーナー -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>よくあるご質問</h2>
+                <p>Frequently Asked Questions</p>
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Q1. 理数科目が苦手でも、SAコースについていけますか？</span>
+                        <i class="fa-solid fa-plus faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            もちろん大丈夫です！SAコースは「理系エリート養成」だけを目的とするのではないため、まずは「なぜだろう？」という好奇心を育むことを大切にしています。実験を中心とした体感授業から入るので、楽しみながら自然と得意になっていきますよ。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Q2. 普通クラスとの交流はありますか？</span>
+                        <i class="fa-solid fa-plus faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            はい、十分にあります。体育祭や文化祭といった学校全体の行事、部活動、生徒会活動はすべてのコースの生徒が一緒に行います。コースの枠を超えて、たくさんの友達をつくることができます。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Q3. 高校からの外部進学と内部進学の割合はどれくらいですか？</span>
+                        <i class="fa-solid fa-plus faq-toggle-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            年度によって若干の変動はありますが、概ね内進生が約9割、高校から入学してくる外進生が1割程度です。高校1年生のスタート時に交流オリエンテーションなどを行い、スムーズに馴染めるようなサポートを行っています。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. 入試・体験会インフォメーション -->
+    <section id="entry">
+        <div class="container">
+            <div class="entry-box">
+                <span class="hero-tag" style="background-color: var(--bg-pastel-pink);">Admissions Open</span>
+                <h3>きらきら輝く科学の未来を、<br>いっしょに体験しよう。</h3>
+                <p>昭和学院中学校・高等学校サイエンスアカデミー(SA)コースでは、未来を変える小さな研究員たちをお待ちしています。まずはオープンスクールで実際の実験の楽しさを体験してみませんか？</p>
+                
+                <div class="entry-benefits">
+                    <div class="benefit-item"><i class="fa-solid fa-heart"></i> 個別相談随時</div>
+                    <div class="benefit-item" style="background-color: var(--bg-pastel-blue); color: var(--main-blue);"><i class="fa-solid fa-star"></i> 体験授業開催中</div>
+                    <div class="benefit-item" style="background-color: var(--bg-pastel-purple); color: var(--main-purple);"><i class="fa-solid fa-sparkles"></i> 施設見学OK</div>
+                </div>
+
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#" class="btn-pastel" onclick="showNotice('学校パンフレットのダウンロードをお申し込みいただきました！メールにてデジタルカタログをお送りいたします。')">資料請求はこちら <i class="fa-solid fa-paper-plane"></i></a>
+                    <a href="#" class="btn-pastel secondary" onclick="showNotice('オープンスクール・学校説明会のご予約画面へ移行します。（模擬システム）')">説明会・見学予約</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. フッター -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-logo-desc">
+                <h3><div class="logo-circle" style="width: 35px; height: 35px; font-size: 1rem;">SA</div> 昭和学院SAコース</h3>
+                <p>自ら学び、自ら考え、自ら道をひらく。豊かな感性を育みながら、世界で活躍できるサイエンスマインドを備えたリーダーを育成します。</p>
+            </div>
+            <div class="footer-links">
+                <h4>コースメニュー</h4>
+                <ul>
+                    <li><a href="#hero">ホーム</a></li>
+                    <li><a href="#concept">SAの想い</a></li>
+                    <li><a href="#features">コースの特色</a></li>
+                    <li><a href="#curriculum">カリキュラム</a></li>
+                    <li><a href="#faq">よくあるご質問</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>昭和学院中学校・高等学校</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 〒272-0823 千葉県市川市東菅野2丁目17-1</p>
+                <p><i class="fa-solid fa-phone"></i> 047-323-4171（代表）</p>
+                <p><i class="fa-solid fa-envelope"></i> info@showagakuin.ac.jp</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Showa Gakuin Junior & Senior High School. All Rights Reserved. Created with Love & Pastel Science.</p>
+        </div>
+    </footer>
+
+    <!-- 通知モーダル（ボタンを押したときに出てくる可愛いポップアップメッセージ） -->
+    <div id="noticeModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(5px);">
+        <div style="background: white; padding: 40px; border-radius: 30px; max-width: 450px; width: 90%; text-align: center; box-shadow: var(--shadow-hover); border: 4px solid var(--main-pink); animation: float 6s ease-in-out infinite;">
+            <div style="font-size: 3rem; color: var(--main-pink); margin-bottom: 20px;"><i class="fa-solid fa-heart-circle-check"></i></div>
+            <h4 style="font-size: 1.3rem; margin-bottom: 15px; color: var(--text-dark); font-weight: 700;">ありがとうございます！</h4>
+            <p id="noticeText" style="font-size: 0.95rem; color: var(--text-color); margin-bottom: 25px; line-height: 1.6;"></p>
+            <button class="btn-pastel" onclick="closeNotice()" style="border-color: var(--main-pink); background: var(--bg-pastel-pink); cursor: pointer;">とじる</button>
+        </div>
+    </div>
+
+    <!-- JavaScriptファイルの読み込み（CodePenでは自動で連携されます） -->
+    <script src="script.js"></script>
+</body>
+</html>
